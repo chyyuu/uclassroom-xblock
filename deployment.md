@@ -153,4 +153,6 @@ chmod 777 uc_docker
 cd ucore_doc
 ../gitbook/bin/gitbook.js serve .
 ```
-这一步也可以放到 rc.local中
+在fedora/centos中，这一步也可以放到 /etc/rc.local中
+
+在ubuntu 12.04中，这一部要放到/etc/profile中
