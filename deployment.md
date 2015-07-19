@@ -146,3 +146,11 @@ chmod 777 uc_docker
 ```
 /edx/var/log/lms/edx.log
 ```
+
+## 启动gitbook
+4. 这个放在autotest vm中，
+```
+cd ucore_doc
+../gitbook/bin/gitbook.js serve .
+```
+这一步也可以放到 rc.local中
