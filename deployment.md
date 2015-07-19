@@ -114,3 +114,8 @@ sudo mysql
 > use edxapp;
 > update auth_user set is_active=1 where username="XXX"
 ```
+#### 修改后台
+```
+firefox http://192.168.122.135:18010/
+```
+进入 edx studio
