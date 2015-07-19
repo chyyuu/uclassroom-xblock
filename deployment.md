@@ -130,3 +130,18 @@ chmod 755 uc_docker
 #### 创建uc_docker组件出错2
 如果出现其他错误，有可能是git server 没起或者git server的ip变了
 目前的git server ip是 192.168.122.5
+
+#### 创建uc_docker组件出错3
+前面对错误1的处理不够全面，应该是
+```
+chmod 777 uc_docker
+```
+#### 创建uc_docker组件出错(未知)
+可以查看 edx的后台日志
+```
+/edx/var/log/cms/edx.log
+```
+可以查看 edx的前台日志
+```
+/edx/var/log/lms/edx.log
+```
