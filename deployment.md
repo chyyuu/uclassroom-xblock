@@ -5,15 +5,26 @@
 * 允许用户注册后不需要验证邮件即可登录  
 
 
-### Docker 服务器(推荐使用CentOS 7)
+### mooc-edx2 Docker 服务器(推荐使用CentOS 7)
 * 安装docker
 * 创建密钥
   编辑脚本`scripts/pemgen.sh`，设置环境变量`UC_DOMAIN`为Docker服务器的域名  
   执行脚本`scripts/pemgen.sh`，然后将会在`scripts/certs`文件夹下看到生成的若干密钥
-* 使用以下命令，启动Docker服务：  
+* 使用以下命令，
+
+1 stop early docker server
+
+```
+sudo service docker stop
+```
+
+2 启动Docker服务：  
 ```
 $sudo docker -d --tlsverify --tlscacert=<ca.pem> --tlscert=<server-cert.pem> --tlskey=<server-key.pem> -H=0.0.0.0:2376
 ```
+
+below two steps is needless now.
+
 * 访问Docker服务器，添加默认镜像，在`scripts`目录下找到Dockerfile文件，执行： 
 ```
 $sudo docker --tlsverify -H=<docker-server>:<port> --tlscacert=<ca.pem> --tlscert=<cert.pem> --tlskey=<key.pem> pull docker.io/fedora:21
@@ -43,10 +54,12 @@ $npm install
 "MAX_USER_NUM_OF_ROOM": 2
 }
 ```
-* 使用 `$node app.js` 启动Node.js监听服务
+启动Node.js监听服务
+```
+$node app.js
+```
 
-
-### Open edX 服务器(使用Ubuntu Server 12.04)
+### mooc-edx2  Open edX 服务器(使用Ubuntu Server 12.04)
 * Open edX安装方法请参考[部署文档](https://github.com/ggxx/code-viewer/blob/master/%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3.md)或[部署文档](https://github.com/xyongcn/code-viewer/blob/master/%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3.md)  
 * 在Open edX服务器上安装docker，请参考[这里](http://docs.docker.com/installation/ubuntulinux/#ubuntu-precise-1204-lts-64-bit)  
 
