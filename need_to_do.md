@@ -1,0 +1,5 @@
+- edx与docker放在不同的vm上
+- vnc server应该在docker所在vm上
+- gitbook目前放在autotest所在vm上，是否需要调整？
+- 在前端页面启动lab, 等待较长时间，需要刷新才能看到console/vnc的按钮，能否更加及时看到？
+- 在前端,gitbook, 虚拟机可以左右，上下，全屏等布局，二者的iframe可以调整大小
