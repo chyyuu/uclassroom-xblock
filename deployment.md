@@ -106,3 +106,11 @@ $sudo -u edxapp /edx/bin/pip.edxapp uninstall uc-rtc-xblock
 ```
 $sudo -u edxapp /edx/bin/pip.edxapp uninstall uc-docker-xblock
 ```
+
+
+#### 直接激活注册用户
+```
+sudo mysql
+> use edxapp;
+> update auth_user set is_active=1 where username="XXX"
+```
