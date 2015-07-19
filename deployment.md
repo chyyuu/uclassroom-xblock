@@ -21,6 +21,8 @@ sudo service docker stop
 2 启动Docker服务：  
 ```
 $sudo docker -d --tlsverify --tlscacert=<ca.pem> --tlscert=<server-cert.pem> --tlskey=<server-key.pem> -H=0.0.0.0:2376
+OR
+cd ~; rundocker.sh
 ```
 
 below two steps is needless now.
@@ -54,9 +56,13 @@ $npm install
 "MAX_USER_NUM_OF_ROOM": 2
 }
 ```
-启动Node.js监听服务
+
+3 启动Node.js监听服务
 ```
 $node app.js
+OR
+cd ~; runnode.sh
+
 ```
 
 ### mooc-edx2  Open edX 服务器(使用Ubuntu Server 12.04)
