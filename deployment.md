@@ -120,10 +120,13 @@ firefox http://192.168.122.135:18010/
 ```
 进入 edx studio
 
-#### 创建uc_docker组件出错
+#### 创建uc_docker组件出错1
 在mooc_edx2机器中的“/tmp”目录下，执行
 ```
 cd /tmp
 mkdir uc_docker
 chmod 755 uc_docker
 ```
+#### 创建uc_docker组件出错2
+如果出现其他错误，有可能是git server 没起或者git server的ip变了
+目前的git server ip是 192.168.122.5
