@@ -64,7 +64,7 @@ OR
 cd ~; runnode.sh
 
 ```
-1,2,3 可以放在/etc/rc.local中自动执行
+1,2,3 可以放在/etc/rc.local中自动执行(在centos-7上实验成功，在ubuntu上，应该添加到/etc/profile中，因为rc.local经常无法自动执行)
 
 ### mooc-edx2  Open edX 服务器(使用Ubuntu Server 12.04)
 * Open edX安装方法请参考[部署文档](https://github.com/ggxx/code-viewer/blob/master/%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3.md)或[部署文档](https://github.com/xyongcn/code-viewer/blob/master/%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3.md)  
