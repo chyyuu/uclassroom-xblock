@@ -119,3 +119,11 @@ sudo mysql
 firefox http://192.168.122.135:18010/
 ```
 进入 edx studio
+
+#### 创建uc_docker组件出错
+在mooc_edx2机器中的“/tmp”目录下，执行
+```
+cd /tmp
+mkdir uc_docker
+chmod 755 uc_docker
+```
